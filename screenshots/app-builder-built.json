@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "徐绍校 — AI 工程化负责人",
+      "hasCanvas": false,
+      "bodyTextLen": 2136,
+      "bodyTextHash": "0a4f0e04294831e57f16edf5ae63a40ce756fec8437698ee195785572540f26f",
+      "bodyTextPrefix": "skip SX identity log stack systems contact EN ⌘K DWG SX-01 REV 9",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "徐绍校 — AI 工程化负责人",
+      "hasCanvas": false,
+      "bodyTextLen": 1996,
+      "bodyTextHash": "f308ff11c714b71c8cdebbdfac57c269d6d2bf6084d7863e96a4330a5e1a9fd3",
+      "bodyTextPrefix": "skip SX identity log stack contact EN MANIFEST / 0x01 Shaoxiao X",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
