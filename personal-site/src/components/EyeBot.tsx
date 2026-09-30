@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 /** Animation stays outside React rendering and pauses when the icon is hidden. */
-export function EyeBot() {
+export function EyeBot({ label }: { label: string }) {
   const face = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
@@ -162,8 +162,8 @@ export function EyeBot() {
       ref={face}
       className="eye-bot"
       href="#about"
-      aria-label="认识 Shaoxiao"
-      title="认识 Shaoxiao"
+      aria-label={label}
+      title={label}
     >
       <span className="eye-bot-head" aria-hidden="true">
         <span className="eye-bot-gaze">

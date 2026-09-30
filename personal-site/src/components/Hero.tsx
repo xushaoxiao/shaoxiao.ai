@@ -1,13 +1,15 @@
+import { translate, type Locale } from "@/content/i18n";
 import { EyeBot } from "./EyeBot";
 import Image from "next/image";
 
-export function Hero() {
+export function Hero({ locale }: { locale: Locale }) {
+  const t = (text: string) => translate(locale, text);
   return (
     <section className="hero" id="home">
       <Image
         className="hero-art"
         src="/assets/frontier-hero.jpg"
-        alt="地球夜间弧线与向远方飞行的银色飞船，象征探索下一种增长"
+        alt={t("地球夜间弧线与向远方飞行的银色飞船，象征探索下一种增长")}
         priority
         width={1792}
         height={1024}
@@ -20,22 +22,23 @@ export function Hero() {
         <p className="hero-overline">AI ENGINEER. GLOBAL GROWTH BUILDER.</p>
         <div className="hero-title">
           <h1>
-            用 AI，
+            {t("用 AI，")}
             <br />
-            <span>构建增长。</span>
+            <span>{t("构建增长。")}</span>
           </h1>
-          <EyeBot />
+          <EyeBot label={t("认识 Shaoxiao")} />
         </div>
         <p className="hero-copy">
-          连接工程、产品与营销，
+          {t("连接工程、产品与营销，")}
           <br />
-          探索全球市场的增长机会。
+          {t("探索全球市场的增长机会。")}
         </p>
         <a className="button hero-button" href="#content">
-          探索我的洞察 <span>→</span>
+          {t("探索我的洞察")}
+          <span>→</span>
         </a>
         <a className="hero-secondary" href="#about">
-          从工程，到增长。认识我 ↗
+          {t("从工程，到增长。认识我 ↗")}
         </a>
       </div>
       <div className="hero-foot">

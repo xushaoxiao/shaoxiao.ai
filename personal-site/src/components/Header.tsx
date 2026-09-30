@@ -1,8 +1,13 @@
 "use client";
 
+import { translate, type Locale } from "@/content/i18n";
+
+import { LanguageSwitch } from "./LanguageSwitch";
+
 import { useEffect, useState } from "react";
 
-export function Header() {
+export function Header({ locale }: { locale: Locale }) {
+  const t = (text: string) => translate(locale, text);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > 24);
@@ -15,20 +20,24 @@ export function Header() {
       <a className="brand" href="#home">
         SHAOXIAO<span className="brand-dot">.</span>
       </a>
-      <nav aria-label="主导航">
-        <a href="#content">洞察</a>
-        <a href="#ideas">构建</a>
-        <a href="#about">关于我</a>
-        <a href="#connect">连接</a>
+      <nav aria-label={t("主导航")}>
+        <a href="#content">{t("洞察")}</a>
+        <a href="#ideas">{t("构建")}</a>
+        <a href="#about">{t("关于我")}</a>
+        <a href="#connect">{t("连接")}</a>
       </nav>
-      <a
-        className="nav-connect"
-        href="https://x.com/Shaoxiao_ai"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        关注 Shaoxiao <span>↗</span>
-      </a>
+      <div className="nav-actions">
+        <LanguageSwitch locale={locale} />
+        <a
+          className="nav-connect"
+          href="https://x.com/Shaoxiao_ai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {t("关注 Shaoxiao")}
+          <span>↗</span>
+        </a>
+      </div>
     </header>
   );
 }
