@@ -6,7 +6,7 @@
 
 ## 主视觉
 
-使用内置图像生成工具制作，网站中的最终文件为 assets/frontier-hero.jpg。
+使用内置图像生成工具制作，网站中的最终文件为 public/assets/frontier-hero.jpg。
 
 ## 生成提示词
 

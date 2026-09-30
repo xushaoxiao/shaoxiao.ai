@@ -1,25 +1,35 @@
-# Shaoxiao · 个人 IP 网站
+# Shaoxiao · Next.js 个人网站
 
-以「用 AI，构建增长。」为首页主张的个人网站，呈现 AI 工程、产品与全球增长实践，并连接 LinkedIn、X、YouTube 和微信公众号内容。
+采用 Next.js App Router、React 和 TypeScript，保留「用 AI，构建增长。」主题与既有个人内容。
 
-## 本地预览
+## 开发与构建
 
-这是一个无需构建的静态网站。在仓库根目录运行：
+要求 Node.js 22 LTS 或更新的受支持版本。
 
 ```sh
-python3 -m http.server 4173 --directory personal-site
+npm ci
+npm run dev
+npm run build
+npm run typecheck
 ```
 
-然后打开 http://localhost:4173/ 。也可以将本目录整体部署到支持静态文件的网站托管服务。
+开发预览：http://127.0.0.1:4173 。生产构建输出位于 `out/`。
 
-## 文件
+## 结构与维护
 
-- `index.html`：页面内容与社交链接。
-- `style.css`：黑、白、石墨灰与红色的视觉样式及响应式布局。
-- `site.js`：页面滚动时的导航交互。
-- `assets/frontier-hero.jpg`：原创生成的航天主题主视觉。
-- `DESIGN.md`：设计说明与主视觉生成提示词。
+- `src/app/page.tsx` 组合首页章节；`layout.tsx` 管理全站元信息。
+- `src/content/social.ts` 集中维护社交平台信息。
+- `src/components/` 分别维护导航、首页、洞察、构建、经历、理念、社交连接和页脚。
+- 展示章节默认使用服务端组件；滚动导航与互动眼睛图标使用客户端组件，并负责清理事件监听；眼睛动效包含自然张望、呼吸、平滑跟随、眨眼及靠近反馈，支持减少动画偏好；触屏设备不跟随指针，离开视口或页面隐藏时暂停。
+- `src/app/globals.css` 管理视觉与响应式样式。
+- `public/` 存放主视觉与站点图标；字体仍通过外部服务加载。
 
-字体通过外部字体服务加载，使用时需要网络连接。
+## 部署
 
-此目录保存本次制作的完整静态版本，与仓库根目录的现有应用分别维护。
+当前使用 Next.js 静态导出，可将 `out/` 发布到 Sites 或其他静态托管平台。
+
+在 Vercel 新建项目时，Root Directory 选择 `personal-site`，使用本目录的 `package.json` 构建。当前静态配置不需要数据库或服务器运行环境。
+
+需要登录、实时内容、API 或 Server Actions 时，应改成支持 Next.js 服务端的部署方式，并移除 `output: "export"`；静态导出不提供这些运行时能力。
+
+仓库根目录的已有应用分别维护，不属于本项目构建范围。
