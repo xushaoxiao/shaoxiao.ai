@@ -6,10 +6,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     "https://engineering-field-notes.shaoxiaoxu.chatgpt.site",
   ),
-  title: "Shaoxiao · AI × Global Growth",
+  title: "Shaoxiao Xu · Engineering, Marketing & Global Growth",
   description:
-    "AI engineer and global growth builder. Connecting engineering, product and marketing to build growth with AI.",
+    "Independent work and thinking by Shaoxiao Xu. AI engineering, marketing and global growth, through product detail and practical experiments.",
   alternates: {
+    canonical: "/en/",
     languages: {
       "zh-CN": "/",
       en: "/en/",
@@ -17,9 +18,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Shaoxiao · AI × Global Growth",
+    title: "Shaoxiao Xu · Engineering, Marketing & Global Growth",
     description:
-      "AI engineer and global growth builder. Connecting engineering, product and marketing to build growth with AI.",
+      "Independent work and thinking by Shaoxiao Xu. AI engineering, marketing and global growth, through product detail and practical experiments.",
     type: "website",
     locale: "en_US",
     alternateLocale: "zh_CN",

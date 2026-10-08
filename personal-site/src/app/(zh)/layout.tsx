@@ -6,10 +6,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     "https://engineering-field-notes.shaoxiaoxu.chatgpt.site",
   ),
-  title: "Shaoxiao · AI × 出海增长",
+  title: "Shaoxiao Xu · AI 工程、营销与全球增长",
   description:
-    "我是 Shaoxiao，AI 工程师，做增长。AI Agents、AI Infra、Growth Marketing。用 AI 做增长，用数据看出海。",
+    "Shaoxiao Xu 的个人作品与思考。AI 工程、AI 营销、全球增长与创业，记录产品拆解与实践中的工程取舍。",
   alternates: {
+    canonical: "/",
     languages: {
       "zh-CN": "/",
       en: "/en/",
@@ -17,9 +18,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Shaoxiao · AI × 出海增长",
+    title: "Shaoxiao Xu · AI 工程、营销与全球增长",
     description:
-      "我是 Shaoxiao，AI 工程师，做增长。AI Agents、AI Infra、Growth Marketing。用 AI 做增长，用数据看出海。",
+      "Shaoxiao Xu 的个人作品与思考。AI 工程、AI 营销、全球增长与创业，记录产品拆解与实践中的工程取舍。",
     type: "website",
     locale: "zh_CN",
     alternateLocale: "en_US",
